@@ -1,0 +1,53 @@
+name: Auto Build and Update Dist
+
+on:
+  push:
+    branches:
+      - master # 确认你的主分支是 master，如果是 main 请修改
+    # 只有修改 src 或 package.json 时才触发，避免无关改动浪费资源
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'yarn.lock'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # 关键：跳过由 Actions 机器人自己提交的 commit，防止无限循环
+    if: "!contains(github.event.head_commit.message, 'chore: auto build')"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # 需要完整历史记录来推送到分支
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          # 使用缓存加快安装速度
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Commit and Push Dist
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 强制添加 dist 目录（即使它在 .gitignore 里）
+          git add dist/ -f
+          
+          # 检查是否有文件变化，有则提交并推送
+          if git diff --staged --quiet; then
+            echo "No changes in dist to commit"
+          else
+            git commit -m "chore: auto build dist [skip ci]"
+            git push origin master
+          fi
