@@ -1,5 +1,5 @@
 {
-  "name": "@fingerprintjs/fingerprintjs",
+  "name": "@zhyswan/fingerprintjs",
   "description": "Browser fingerprinting library with the highest accuracy and stability",
   "version": "5.0.1",
   "keywords": [
@@ -18,12 +18,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fingerprintjs/fingerprintjs.git"
+    "url": "https://github.com/zhyswan/fingerprintjs.git"
   },
-  "bugs": {
-    "url": "https://github.com/fingerprintjs/fingerprintjs/issues"
-  },
-  "homepage": "https://github.com/fingerprintjs/fingerprintjs",
   "main": "dist/fp.cjs.js",
   "module": "dist/fp.esm.js",
   "types": "dist/fp.d.ts",
