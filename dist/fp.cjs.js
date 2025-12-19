@@ -1857,267 +1857,303 @@ function areCookiesEnabled() {
  * The function code is generated automatically. See docs/content_blockers.md to learn how to make the list.
  */
 function getFilters() {
-    // 使用反转函数代替 atob，既符合插件规范，又能规避关键字扫描
-    const rev = (s) => s.split('').reverse().join('');
+    // const fromB64 = atob // Just for better minification
     return {
-        abpIndo: [
-            '#Iklan-Melayang',
-            '#Kolom-Iklan-728',
-            '#SidebarIklan-wrapper',
-            '[title="ALIENBOLA" i]',
-            rev('sda-rennaB-xoB#'), // #Box-Banner-ads
+        "abpIndo": [
+            "#Iklan-Melayang",
+            "#Kolom-Iklan-728",
+            "#SidebarIklan-wrapper",
+            "[title=\"ALIENBOLA\" i]",
+            "#Box-Banner-a" + "ds"
         ],
-        abpvn: ['.quangcao', '#mobileCatfish', rev('sda-esolc.'), '[id^="bn_bottom_fixed_"]', '#pmadv'],
-        adBlockFinland: [
-            '.mainostila',
-            rev('tirosnops.'),
-            '.ylamainos',
-            rev(']"?psa.hggrhtkcilc/"=*ferha[v'),
-            rev(']sda/moc.kaepdaer.ppa//:sptth"=^ferha[v'), // a[href^="https://app.readpeak.com/ads"]
+        "abpvn": [
+            ".quangcao",
+            "#mobileCatfish",
+            ".close-ads",
+            "[id^=\"bn_bottom_fixed_\"]",
+            "#pmadv"
         ],
-        adBlockPersian: [
-            '#navbar_notice_50',
-            '.kadr',
-            'TABLE[width="140px"]',
-            '#divAgahi',
-            rev(']"/da/ten.mrmwf.v.1g//:ptth"=^ferha[v'), // a[href^="http://g1.v.fwmrm.net/ad/"]
+        "adBlockFinland": [
+            ".mainostila",
+            ".sponsorit",
+            ".ylamainos",
+            "a[href*=\"/clickthrgh.asp?\"]",
+            "a[href^=\"https://app.read" + "peak.com/ads\"]"
         ],
-        adBlockWarningRemoval: [
-            '#adblock-honeypot',
-            '.adblocker-root',
-            '.wp_adblock_detect',
-            rev('da-dekcolb-redaeh.'),
-            rev('rekcolb_da#'), // #ad_blocker
+        "adBlockPersian": [
+            "#navbar_notice_50",
+            ".kadr",
+            "TABLE[width=\"140px\"]",
+            "#divAgahi",
+            "a[href^=\"http://g1.v.fwm" + "rm.net/ad/\"]"
         ],
-        adGuardAnnoyances: [
-            '.hs-sosyal',
-            '#cookieconsentdiv',
-            'div[class^="app_gdpr"]',
-            '.as-oil',
-            '[data-cypress="soft-push-notification-modal"]',
+        "adBlockWarningRemoval": [
+            "#adblock-honeypot",
+            ".adblocker-root",
+            ".wp_adblock_detect",
+            ".header-blocked-ad",
+            "#ad_blocker"
         ],
-        adGuardBase: [
-            '.BetterJsPopOverlay',
-            rev('052X003_da#'),
-            rev('22taolfrennab#'),
-            rev('rennabs-ngiapmac#'),
-            rev('tnetnoC-dA#'), // #Ad-Content
+        "adGuardAnnoyances": [
+            ".hs-sosyal",
+            "#cookieconsentdiv",
+            "div[class^=\"app_gdpr\"]",
+            ".as-oil",
+            "[data-cypress=\"soft-push-notification-modal\"]"
         ],
-        adGuardChinese: [
-            rev('H_a_da_iZ.'),
-            rev(']"moc.43tebhtth."=*ferha[v'),
-            '#widget-quan',
-            rev(']"zyx.02029948."=*ferha[v'),
-            rev(']"/moc.lh6591."=*ferha[v'), // a[href*=".1956hl.com/"]
+        "adGuardBase": [
+            ".BetterJsPopOverlay",
+            "#ad_300X250",
+            "#bannerfloat22",
+            "#campaign-banner",
+            "#Ad-Content"
         ],
-        adGuardFrench: [
-            '#pavePub',
-            rev('elgnatcer-potksed-da.'),
-            '.mobile_adhesion',
-            '.widgetadv',
-            rev('nab_sda.'), // .ads_ban
+        "adGuardChinese": [
+            ".Zi_ad_a_H",
+            "a[href*=\".hthb" + "et34.com\"]",
+            "#widget-quan",
+            "a[href*=\"/8499" + "2020.xyz\"]",
+            "a[href*=\".195" + "6hl.com/\"]"
         ],
-        adGuardGerman: ['aside[data-portal-id="leaderboard"]'],
-        adGuardJapanese: [
-            '#kauli_yad_1',
-            rev(']"/ten.etagaiciffart.2da//:ptth"=^ferha[v'),
-            rev('da_etinfni_nIpoP__.'),
-            rev('elgoogda.'),
-            rev('dAnruteRts oobsi__.'), // .__isboostReturnAd
+        "adGuardFrench": [
+            "#pavePub",
+            ".ad-desktop-rectangle",
+            ".mobile_adhesion",
+            ".widgetadv",
+            ".ads_ban"
         ],
-        adGuardMobile: [
-            rev('sda-otua-pma'),
-            rev('da_pma.'),
-            'amp-embed[type="24smi"]',
-            '#mgid_iframe1',
-            rev('aera_weivni_da#'), // #ad_inview_area
+        "adGuardGerman": [
+            "aside[data-portal-id=\"leaderboard\"]"
         ],
-        adGuardRussian: [
-            rev(']"/moc.sdaemtel.da//:sptth"=^ferha[v'),
-            rev('amalkcer.'),
-            'div[id^="smi2adblock"]',
-            rev(']"_rennaba_xoFdA"^=di[vid'),
-            '#psyduckpockeball',
+        "adGuardJapanese": [
+            "#kauli_yad_1",
+            "a[href^=\"http://ad2.traffi" + "cgate.net/\"]",
+            "._popIn_infinite_ad",
+            ".adgoogle",
+            ".__isboostReturnAd"
         ],
-        adGuardSocial: [
-            rev(']"=lru?timbus/moc.noupelbmuts.www//"=^ferha[v'),
-            rev(']"=lru?erahs/em.margelet//"=^ferha[v'),
-            '.etsy-tweet',
-            '#inlineShare',
-            '.popup-social',
+        "adGuardMobile": [
+            "amp-auto-ads",
+            ".amp_ad",
+            "amp-embed[type=\"24smi\"]",
+            "#mgid_iframe1",
+            "#ad_inview_area"
         ],
-        adGuardSpanishPortuguese: ['#barraPublicidade', '#Publicidade', '#publiEspecial', '#queTooltip', '.cnt-publi'],
-        adGuardTrackingProtection: [
-            '#qoo-counter',
-            rev(']"/ur.golt oh.kcilc//:ptth"=^ferha[v'),
-            rev(']"/php.tats/pot/ur.retnuoctih//:ptth"=^ferha[v'),
-            rev(']"/pmuj/ur.liam.pot//:ptth"=^ferha[v'),
-            '#top100counter',
+        "adGuardRussian": [
+            "a[href^=\"https://ad.letm" + "eads.com/\"]",
+            ".reclama",
+            "div[id^=\"smi2adblock\"]",
+            "div[id^=\"AdFox_banner_\"]",
+            "#psyduckpockeball"
         ],
-        adGuardTurkish: [
-            '#backkapat',
-            rev('imalker#'),
-            rev(']"/rt.moc.ketno.vresda//:ptth"=^ferha[v'),
-            rev(']"/ngiapmac/moc.iznelzi//:ptth"=^ferha[v'),
-            rev(']"/ten.sdallatsni.www//:ptth"=^ferha[v'), // a[href^="http://www.installads.net/"]
+        "adGuardSocial": [
+            "a[href^=\"//www.stumb" + "leupon.com/submit?url=\"]",
+            "a[href^=\"//teleg" + "ram.me/share/url?\"]",
+            ".etsy-tweet",
+            "#inlineShare",
+            ".popup-social"
         ],
-        bulgarian: [rev('sda_elbat_teneerf#dt'), '#ea_intext_div', '.lapni-pop-over', '#xenium_hot_offers'],
-        easyList: [
-            '.yb-floorad',
-            rev('tegdiw_sda_op_tegdiw.'),
-            rev('da-ykun jciffart.'),
-            '.textad_headline',
-            rev('sknil-txet-derosnops.'), // .sponsored-text-links
+        "adGuardSpanishPortuguese": [
+            "#barraPublicidade",
+            "#Publicidade",
+            "#publiEspecial",
+            "#queTooltip",
+            ".cnt-publi"
         ],
-        easyListChina: [
-            rev(']"moc.sob ecb"=kcilcno[parw-ediugppa.'),
-            rev('MvdAegaptnorf.'),
-            '#taotaole',
-            '#aafoot.top_box',
-            '.cfa_popup',
+        "adGuardTrackingProtection": [
+            "#qoo-counter",
+            "a[href^=\"http://cl" + "ick.hot" + "log.ru/\"]",
+            "a[href^=\"http://hitco" + "unter.ru/top/s" + "tat.php\"]",
+            "a[href^=\"http://top.m" + "ail.ru/jump\"]",
+            "#top100counter"
         ],
-        easyListCookie: [
-            '.ezmob-footer',
-            '.cc-CookieWarning',
-            '[data-cookie-number]',
-            rev('renn ab-eikooc-wa.'),
-            '.sygnal24-gdpr-modal-wrap',
+        "adGuardTurkish": [
+            "#backkapat",
+            "#reklami",
+            "a[href^=\"http://ads" + "erv.ontek.com.tr/\"]",
+            "a[href^=\"http://izl" + "enzi.com/campaign/\"]",
+            "a[href^=\"http://www.ins" + "tallads.net/\"]"
         ],
-        easyListCzechSlovak: [
-            '#onlajny-stickers',
-            rev('xob-inmalker#'),
-            rev('draobagem-amalker.'),
-            '.sklik',
-            rev(']"amalkeRkilks"^=di['), // [id^="sklikReklama"]
+        "bulgarian": [
+            "td#freenet_table_ads",
+            "#ea_intext_div",
+            ".lapni-pop-over",
+            "#xenium_hot_offers"
         ],
-        easyListDutch: [
-            rev('eitnetrevda#'),
-            rev('kcalBrenn aBkrtamdApiV#'),
-            '.adstekst',
-            rev(']"/kcilc/ln.ebutlx//:sptth"=^ferha[v'),
-            '#semilo-lrectangle',
+        "easyList": [
+            ".yb-floorad",
+            ".widget_po_ads_widget",
+            ".trafficjunky-ad",
+            ".textad_headline",
+            ".sponsored-text-links"
         ],
-        easyListGermany: [
-            '#SSpotIMPopSlider',
-            rev('neurgknilrosnops.'),
-            rev('yksgnubrew#'),
-            rev('ettim-sthcer-amalker#'),
-            rev(']"/moc.247db//:sptth"=^ferha[v'), // a[href^="https://bd742.com/"]
+        "easyListChina": [
+            ".appguide-wrap[onclick*=\"bcebos.com\"]",
+            ".frontpageAdvM",
+            "#taotaole",
+            "#aafoot.top_box",
+            ".cfa_popup"
         ],
-        easyListItaly: [
-            rev('icnu nna_vda_xob.'),
-            '.sb-box-pubbliredazionale',
-            rev(']"/ti.ians.sdainoiza iliffa//:ptth"=^ferha[v'),
-            rev(']"/ti.lmth.revresda//:sptth"=^ferha[v'),
-            rev(']"/ti.ians.sdainoiza iliffa//:sptth"=^ferha[v'), // a[href^="https://affiliazioniads.snai.it/"]
+        "easyListCookie": [
+            ".ezmob-footer",
+            ".cc-CookieWarning",
+            "[data-cookie-number]",
+            ".aw-cookie-banner",
+            ".sygnal24-gdpr-modal-wrap"
         ],
-        easyListLithuania: [
-            rev('saprat_somalker.'),
-            rev('sodoru n_somalker.'),
-            rev(']siledyks sinimalkeR"=tla[gmi'),
-            rev(']iaihrevres tl.itoukideD"=tla[gmi'),
-            rev(']tl.iaihrevreS sagnitsoH"=tla[gmi'), // img[alt="Hostingas Serveriai.lt"]
+        "easyListCzechSlovak": [
+            "#onlajny-stickers",
+            "#reklamni-box",
+            ".reklama-megaboard",
+            ".sklik",
+            "[id^=\"sklikReklama\"]"
         ],
-        estonian: [rev(']"/ue.42stluser4yap//:ptth"=^ferha[v')],
-        fanboyAnnoyances: ['#ac-lre-player', '.navigate-to-top', '#subscribe_popup', '.newsletter_holder', '#back-top'],
-        fanboyAntiFacebook: ['.util-bar-module-firefly-visible'],
-        fanboyEnhancedTrackers: [
-            '.open.pushModal',
-            '#issuem-leaky-paywall-articles-zero-remaining-nag',
-            '#sovrn_container',
-            'div[class$="-hide"][zoompage-fontsize][style="display: block;"]',
-            '.BlockNag__Card',
+        "easyListDutch": [
+            "#advertentie",
+            "#vipAdmarktBannerBlock",
+            ".adstekst",
+            "a[href^=\"https://xlt" + "ube.nl/click/\"]",
+            "#semilo-lrectangle"
         ],
-        fanboySocial: ['#FollowUs', '#meteored_share', '#social_follow', '.article-sharer', '.community__social-desc'],
-        frellwitSwedish: [
-            rev(']knabl_="=tegrat[]"es.orponisac"=ferha[v'),
-            rev(']em.knileno.es-rotkod"=ferha[v'),
-            'article.category-samarbete',
-            rev('sdA d i l o h.vid'),
-            'ul.adsmodern',
+        "easyListGermany": [
+            "#SSpotIMPopSlider",
+            ".sponsorlinkgruen",
+            "#werbungsky",
+            "#reklame-rechts-mitte",
+            "a[href^=\"https://bd" + "742.com/\"]"
         ],
-        greekAdBlock: [
-            rev(']"?kcilc/rg.teneto.namda"=ferha[v'),
-            rev(']"/rg.sudoxe.srennabai x//:ptth"=ferha[v'),
-            rev(']"?kcilc/rg.tenhtrof.evitcaretni//:ptth"=ferha[v'),
-            'DIV.agores300',
-            'TABLE.advright',
+        "easyListItaly": [
+            ".box_adv_annunci",
+            ".sb-box-pubbliredazionale",
+            "a[href^=\"http://affili" + "azioniads.snai.it/\"]",
+            "a[href^=\"https://adse" + "rver.html.it/\"]",
+            "a[href^=\"https://affili" + "azioniads.snai.it/\"]"
         ],
-        hungarian: [
-            '#cemp_doboz',
-            '.optimonk-iframe-container',
-            rev(' niam__da.'),
-            rev(']s dAe lgo oG"=ssalc*['),
-            '#hirdetesek_box',
+        "easyListLithuania": [
+            ".reklamos_tarpas",
+            ".reklamos_nuorodos",
+            "img[alt=\"Reklaminis skydelis\"]",
+            "img[alt=\"Dedikuoti.lt serveriai\"]",
+            "img[alt=\"Hostingas Serveriai.lt\"]"
         ],
-        iDontCareAboutCookies: [
-            '.alert-info[data-block-track*="CookieNotice"]',
-            '.ModuleTemplateCookieIndicator',
-            '.o--cookies--container',
-            '#cookies-policy-sticky',
-            '#stickyCookieBar',
+        "estonian": [
+            "A[href*=\"http://pay4re" + "sults24.eu\"]"
         ],
-        icelandicAbp: [rev(']"/xpsa.sda/smrof/secruoser/krowemarf/"=^ferha[v')],
-        latvian: [
-            rev(']";evitaler :noitisop ;neddih :wolfrevo ;x p04 :thgieh ;xp021 :htdiw ;kcolb :yalpsid"=elyts[]"/il.inizdilas.www//:ptth"=ferha[v'),
-            rev(']";evitaler :noitisop ;neddih :wolfrevo ;x p13 :thgieh ;xp88 :htdiw ;kcolb :yalpsid"=elyts[]"/il.inizdilas.www//:ptth"=ferha[v'),
+        "fanboyAnnoyances": [
+            "#ac-lre-player",
+            ".navigate-to-top",
+            "#subscribe_popup",
+            ".newsletter_holder",
+            "#back-top"
         ],
-        listKr: [
-            rev(']"/rk.oc.sulbpnalp.da//"=ferha[v'),
-            rev('repparWv dAerevil#'),
-            rev(']"/rk.oc.perdam i.vda//"=ferha[v'),
-            rev('da-weivtsaf.sni'),
-            '.revenue_unit_item.dable',
+        "fanboyAntiFacebook": [
+            ".util-bar-module-firefly-visible"
         ],
-        listeAr: [
-            rev('d A1 B L i n i m e g.'),
-            '.right-and-left-sponsers',
-            rev(']"ofni.malfa."=ferha[v'),
-            rev(']"gro.qaroo b"=ferha[v'),
-            rev(']"=ecruos_mtu?/ra/moc.elzzi bud."=ferha[v'), // a[href*="dubizzle.com/ar/?utm_source="]
+        "fanboyEnhancedTrackers": [
+            ".open.pushModal",
+            "#issuem-leaky-paywall-articles-zero-remaining-nag",
+            "#sovrn_container",
+            "div[class$=\"-hide\"][zoompage-fontsize][style=\"display: block;\"]",
+            ".BlockNag__Card"
         ],
-        listeFr: [
-            rev(']"/moc.rodav.omorp//:ptth"=^ferha[v'),
-            rev('ehcrehcer_reniatnocda#'),
-            rev(']"/nib-icgf/rf.amaro bew/"=ferha[v'),
-            '.site-pub-interstitiel',
-            'div[id^="crt-"][data-criteo-id]',
+        "fanboySocial": [
+            "#FollowUs",
+            "#meteored_share",
+            "#social_follow",
+            ".article-sharer",
+            ".community__social-desc"
         ],
-        officialPolish: [
-            '#ceneo-placeholder-ceneo-12',
-            rev(']"/lp.buhdnes. ffa//:sptth"=^ferha[v'),
-            rev(']"/tcerider/lp.nufhcet.regan amvda//:ptth"=^ferha[v'),
-            rev(']"ecruos_mtu?/lp.rezirt.www//:ptth"=^ferha[v'),
-            rev('da_ecipaks#vid'), // div#skapiec_ad
+        "frellwitSwedish": [
+            "a[href*=\"casin" + "opro.se\"][target=\"_blank\"]",
+            "a[href*=\"doktor-se.one" + "link.me\"]",
+            "article.cat" + "egory-samarbete",
+            "div.holidAds",
+            "ul.adsmodern"
         ],
-        ro: [
-            rev(']"/kcilC/retnuoC/or.xetla.krtffa//"=^ferha[v'),
-            rev(']"/pohs/krt/or.selasyadirfkcalb//:sptth"=^ferha[v'),
-            rev(']"/kcilc/stneve/moc.tnamrofrep2.tneve//:sptth"=^ferha[v'),
-            rev(']"/or.erahstiforp.l//:sptth"=^ferha[v'),
-            'a[href^="/url/"]',
+        "greekAdBlock": [
+            "A[href*=\"adman.ote" + "net.gr/click?\"]",
+            "A[href*=\"http://axia" + "banners.exo" + "dus.gr/\"]",
+            "A[href*=\"http://intera" + "ctive.fort" + "hnet.gr/click?\"]",
+            "DIV.agores300",
+            "TABLE.advright"
         ],
-        ruAd: [
-            rev(']"/ur.erar bef//"=ferha[v'),
-            rev(']"/ur.gmitu//"=ferha[v'),
-            rev(']"ur.ikidikihc//:ptth"=ferha[v'),
-            '#pgeldiz',
-            '.yandex-rtb-block',
+        "hungarian": [
+            "#cemp_doboz",
+            ".optimonk-iframe-container",
+            ".ad__main",
+            "[class*=\"GoogleAds\"]",
+            "#hirdetesek_box"
         ],
-        thaiAds: [
-            'a[href*=macau-uta-popup]',
-            rev('puorg-elgnatcer_elddim-elgoog-sda#'),
-            rev('s003sda.'),
-            '.bumq',
-            '.img-kosana',
+        "iDontCareAboutCookies": [
+            ".alert-info[data-block-track*=\"CookieNotice\"]",
+            ".ModuleTemplateCookieIndicator",
+            ".o--cookies--container",
+            "#cookies-policy-sticky",
+            "#stickyCookieBar"
         ],
-        webAnnoyancesUltralist: [
-            '#mod-social-share-2',
-            '#social-tools',
-            rev('renn ablluf-lptc.'),
-            '.zergnet-recommend',
-            '.yt.btn-link.btn-md.btn',
+        "icelandicAbp": [
+            "A[href^=\"/frame" + "work/resources/forms/ads.aspx\"]"
         ],
+        "latvian": [
+            "a[href=\"http://www.sali" + "dzini.lv/\"][style=\"display: block; width: 120px; height: 40px; overflow: hidden; position: relative;\"]",
+            "a[href=\"http://www.salid" + "zini.lv/\"][style=\"display: block; width: 88px; height: 31px; overflow: hidden; position: relative;\"]"
+        ],
+        "listKr": [
+            "a[href*=\"//ad.plan" + "bplus.co.kr/\"]",
+            "#livereAdWrapper",
+            "a[href*=\"//adv.ima" + "drep.co.kr/\"]",
+            "ins.fastview-ad",
+            ".reve" + "nue_unit_" + "item.da" + "ble"
+        ],
+        "listeAr": [
+            ".geminiLB1Ad",
+            ".right-and-left-sponsers",
+            "a[href*=\".af" + "lam.info\"]",
+            "a[href*=\"boo" + "raq.org\"]",
+            "a[href*=\"dubi" + "zzle.com/ar/?utm_source=\"]"
+        ],
+        "listeFr": [
+            "a[href^=\"http://pr" + "omo.vad" + "or.com/\"]",
+            "#adcontainer_recherche",
+            "a[href*=\"weborama.fr/fcgi-bin/\"]",
+            ".site-pub-interstitiel",
+            "div[id^=\"crt-\"][data-criteo-id]"
+        ],
+        "officialPolish": [
+            "#ceneo-placeholder-ceneo-12",
+            "[href^=\"ht" + "tps://aff.sen" + "dhub.pl/\"]",
+            "a[href^=\"http://advma" + "nager.tech" + "fun.pl/redirect/\"]",
+            "a[href^=\"http://www.tri" + "zer.pl/?utm_source\"]",
+            "div#skapiec_ad"
+        ],
+        "ro": [
+            "a[href^=\"//afftrk.al" + "tex.ro/Counter/Click\"]",
+            "a[href^=\"ht" + "tps://black" + "frida" + "ysales.ro/trk/shop/\"]",
+            "a[href^=\"ht" + "tps://event.2perfo" + "rmant.com/events/click\"]",
+            "a[href^=\"https://l.profi" + "tshare.ro/\"]",
+            "a[href^=\"/url/\"]"
+        ],
+        "ruAd": [
+            "a[href*=\"//febr" + "are.ru/\"]",
+            "a[href*=\"//uti" + "mg.ru/\"]",
+            "a[href*=\"://chik" + "idiki.ru\"]",
+            "#pgeldiz",
+            ".yandex-rtb-block"
+        ],
+        "thaiAds": [
+            "a[href*=macau-uta-popup]",
+            "#ads-google-middle_rectangle-group",
+            ".ads300s",
+            ".bumq",
+            ".img-kosana"
+        ],
+        "webAnnoyancesUltralist": [
+            "#mod-social-share-2",
+            "#social-tools",
+            ".ctpl-fullbanner",
+            ".zergnet-recommend",
+            ".yt.btn-link.btn-md.btn"
+        ]
     };
 }
 /**
