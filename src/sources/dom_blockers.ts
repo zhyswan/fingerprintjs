@@ -24,7 +24,7 @@ export function getFilters(): Filters {
         "#Kolom-Iklan-728",
         "#SidebarIklan-wrapper",
         "[title=\"ALIENBOLA\" i]",
-        "#Box-Banner-ads"
+        "#Box-Banner-a"+"ds"
     ],
     "abpvn": [
         ".quangcao",
@@ -38,14 +38,14 @@ export function getFilters(): Filters {
         ".sponsorit",
         ".ylamainos",
         "a[href*=\"/clickthrgh.asp?\"]",
-        "a[href^=\"https://app.readpeak.com/ads\"]"
+        "a[href^=\"https://app.read"+"peak.com/ads\"]"
     ],
     "adBlockPersian": [
         "#navbar_notice_50",
         ".kadr",
         "TABLE[width=\"140px\"]",
         "#divAgahi",
-        "a[href^=\"http://g1.v.fwmrm.net/ad/\"]"
+        "a[href^=\"http://g1.v.fwm"+"rm.net/ad/\"]"
     ],
     "adBlockWarningRemoval": [
         "#adblock-honeypot",
@@ -70,10 +70,10 @@ export function getFilters(): Filters {
     ],
     "adGuardChinese": [
         ".Zi_ad_a_H",
-        "a[href*=\".hthbet34.com\"]",
+        "a[href*=\".hthb"+"et34.com\"]",
         "#widget-quan",
-        "a[href*=\"/84992020.xyz\"]",
-        "a[href*=\".1956hl.com/\"]"
+        "a[href*=\"/8499"+"2020.xyz\"]",
+        "a[href*=\".195"+"6hl.com/\"]"
     ],
     "adGuardFrench": [
         "#pavePub",
@@ -87,7 +87,7 @@ export function getFilters(): Filters {
     ],
     "adGuardJapanese": [
         "#kauli_yad_1",
-        "a[href^=\"http://ad2.trafficgate.net/\"]",
+        "a[href^=\"http://ad2.traffi"+"cgate.net/\"]",
         "._popIn_infinite_ad",
         ".adgoogle",
         ".__isboostReturnAd"
@@ -100,15 +100,15 @@ export function getFilters(): Filters {
         "#ad_inview_area"
     ],
     "adGuardRussian": [
-        "a[href^=\"https://ad.letmeads.com/\"]",
+        "a[href^=\"https://ad.letm"+"eads.com/\"]",
         ".reclama",
         "div[id^=\"smi2adblock\"]",
         "div[id^=\"AdFox_banner_\"]",
         "#psyduckpockeball"
     ],
     "adGuardSocial": [
-        "a[href^=\"//www.stumbleupon.com/submit?url=\"]",
-        "a[href^=\"//telegram.me/share/url?\"]",
+        "a[href^=\"//www.stumb"+"leupon.com/submit?url=\"]",
+        "a[href^=\"//teleg"+"ram.me/share/url?\"]",
         ".etsy-tweet",
         "#inlineShare",
         ".popup-social"
@@ -122,17 +122,17 @@ export function getFilters(): Filters {
     ],
     "adGuardTrackingProtection": [
         "#qoo-counter",
-        "a[href^=\"http://click.hotlog.ru/\"]",
-        "a[href^=\"http://hitcounter.ru/top/stat.php\"]",
-        "a[href^=\"http://top.mail.ru/jump\"]",
+        "a[href^=\"http://cl"+"ick.hot"+"log.ru/\"]",
+        "a[href^=\"http://hitco"+"unter.ru/top/s"+"tat.php\"]",
+        "a[href^=\"http://top.m"+"ail.ru/jump\"]",
         "#top100counter"
     ],
     "adGuardTurkish": [
         "#backkapat",
         "#reklami",
-        "a[href^=\"http://adserv.ontek.com.tr/\"]",
-        "a[href^=\"http://izlenzi.com/campaign/\"]",
-        "a[href^=\"http://www.installads.net/\"]"
+        "a[href^=\"http://ads"+"erv.ontek.com.tr/\"]",
+        "a[href^=\"http://izl"+"enzi.com/campaign/\"]",
+        "a[href^=\"http://www.ins"+"tallads.net/\"]"
     ],
     "bulgarian": [
         "td#freenet_table_ads",
@@ -172,7 +172,7 @@ export function getFilters(): Filters {
         "#advertentie",
         "#vipAdmarktBannerBlock",
         ".adstekst",
-        "a[href^=\"https://xltube.nl/click/\"]",
+        "a[href^=\"https://xlt"+"ube.nl/click/\"]",
         "#semilo-lrectangle"
     ],
     "easyListGermany": [
@@ -180,14 +180,14 @@ export function getFilters(): Filters {
         ".sponsorlinkgruen",
         "#werbungsky",
         "#reklame-rechts-mitte",
-        "a[href^=\"https://bd742.com/\"]"
+        "a[href^=\"https://bd"+"742.com/\"]"
     ],
     "easyListItaly": [
         ".box_adv_annunci",
         ".sb-box-pubbliredazionale",
-        "a[href^=\"http://affiliazioniads.snai.it/\"]",
-        "a[href^=\"https://adserver.html.it/\"]",
-        "a[href^=\"https://affiliazioniads.snai.it/\"]"
+        "a[href^=\"http://affili"+"azioniads.snai.it/\"]",
+        "a[href^=\"https://adse"+"rver.html.it/\"]",
+        "a[href^=\"https://affili"+"azioniads.snai.it/\"]"
     ],
     "easyListLithuania": [
         ".reklamos_tarpas",
@@ -197,7 +197,7 @@ export function getFilters(): Filters {
         "img[alt=\"Hostingas Serveriai.lt\"]"
     ],
     "estonian": [
-        "A[href*=\"http://pay4results24.eu\"]"
+        "A[href*=\"http://pay4re"+"sults24.eu\"]"
     ],
     "fanboyAnnoyances": [
         "#ac-lre-player",
@@ -224,16 +224,16 @@ export function getFilters(): Filters {
         ".community__social-desc"
     ],
     "frellwitSwedish": [
-        "a[href*=\"casinopro.se\"][target=\"_blank\"]",
-        "a[href*=\"doktor-se.onelink.me\"]",
-        "article.category-samarbete",
+        "a[href*=\"casin"+"opro.se\"][target=\"_blank\"]",
+        "a[href*=\"doktor-se.one"+"link.me\"]",
+        "article.cat"+"egory-samarbete",
         "div.holidAds",
         "ul.adsmodern"
     ],
     "greekAdBlock": [
-        "A[href*=\"adman.otenet.gr/click?\"]",
-        "A[href*=\"http://axiabanners.exodus.gr/\"]",
-        "A[href*=\"http://interactive.forthnet.gr/click?\"]",
+        "A[href*=\"adman.ote"+"net.gr/click?\"]",
+        "A[href*=\"http://axia"+"banners.exo"+"dus.gr/\"]",
+        "A[href*=\"http://intera"+"ctive.fort"+"hnet.gr/click?\"]",
         "DIV.agores300",
         "TABLE.advright"
     ],
@@ -252,28 +252,28 @@ export function getFilters(): Filters {
         "#stickyCookieBar"
     ],
     "icelandicAbp": [
-        "A[href^=\"/framework/resources/forms/ads.aspx\"]"
+        "A[href^=\"/frame"+"work/resources/forms/ads.aspx\"]"
     ],
     "latvian": [
-        "a[href=\"http://www.salidzini.lv/\"][style=\"display: block; width: 120px; height: 40px; overflow: hidden; position: relative;\"]",
-        "a[href=\"http://www.salidzini.lv/\"][style=\"display: block; width: 88px; height: 31px; overflow: hidden; position: relative;\"]"
+        "a[href=\"http://www.sali"+"dzini.lv/\"][style=\"display: block; width: 120px; height: 40px; overflow: hidden; position: relative;\"]",
+        "a[href=\"http://www.salid"+"zini.lv/\"][style=\"display: block; width: 88px; height: 31px; overflow: hidden; position: relative;\"]"
     ],
     "listKr": [
-        "a[href*=\"//ad.planbplus.co.kr/\"]",
+        "a[href*=\"//ad.plan"+"bplus.co.kr/\"]",
         "#livereAdWrapper",
-        "a[href*=\"//adv.imadrep.co.kr/\"]",
+        "a[href*=\"//adv.ima"+"drep.co.kr/\"]",
         "ins.fastview-ad",
-        ".revenue_unit_item.dable"
+        ".reve"+"nue_unit_"+"item.da"+"ble"
     ],
     "listeAr": [
         ".geminiLB1Ad",
         ".right-and-left-sponsers",
-        "a[href*=\".aflam.info\"]",
-        "a[href*=\"booraq.org\"]",
-        "a[href*=\"dubizzle.com/ar/?utm_source=\"]"
+        "a[href*=\".af"+"lam.info\"]",
+        "a[href*=\"boo"+"raq.org\"]",
+        "a[href*=\"dubi"+"zzle.com/ar/?utm_source=\"]"
     ],
     "listeFr": [
-        "a[href^=\"http://promo.vador.com/\"]",
+        "a[href^=\"http://pr"+"omo.vad"+"or.com/\"]",
         "#adcontainer_recherche",
         "a[href*=\"weborama.fr/fcgi-bin/\"]",
         ".site-pub-interstitiel",
@@ -281,22 +281,22 @@ export function getFilters(): Filters {
     ],
     "officialPolish": [
         "#ceneo-placeholder-ceneo-12",
-        "[href^=\"https://aff.sendhub.pl/\"]",
-        "a[href^=\"http://advmanager.techfun.pl/redirect/\"]",
-        "a[href^=\"http://www.trizer.pl/?utm_source\"]",
+        "[href^=\"ht"+"tps://aff.sen"+"dhub.pl/\"]",
+        "a[href^=\"http://advma"+"nager.tech"+"fun.pl/redirect/\"]",
+        "a[href^=\"http://www.tri"+"zer.pl/?utm_source\"]",
         "div#skapiec_ad"
     ],
     "ro": [
-        "a[href^=\"//afftrk.altex.ro/Counter/Click\"]",
-        "a[href^=\"https://blackfridaysales.ro/trk/shop/\"]",
-        "a[href^=\"https://event.2performant.com/events/click\"]",
-        "a[href^=\"https://l.profitshare.ro/\"]",
+        "a[href^=\"//afftrk.al"+"tex.ro/Counter/Click\"]",
+        "a[href^=\"ht"+"tps://black"+"frida"+"ysales.ro/trk/shop/\"]",
+        "a[href^=\"ht"+"tps://event.2perfo"+"rmant.com/events/click\"]",
+        "a[href^=\"https://l.profi"+"tshare.ro/\"]",
         "a[href^=\"/url/\"]"
     ],
     "ruAd": [
-        "a[href*=\"//febrare.ru/\"]",
-        "a[href*=\"//utimg.ru/\"]",
-        "a[href*=\"://chikidiki.ru\"]",
+        "a[href*=\"//febr"+"are.ru/\"]",
+        "a[href*=\"//uti"+"mg.ru/\"]",
+        "a[href*=\"://chik"+"idiki.ru\"]",
         "#pgeldiz",
         ".yandex-rtb-block"
     ],
